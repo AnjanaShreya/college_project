@@ -29,7 +29,25 @@
 
 <main>
     <div style="padding-top: 4%;">
-      <a href="admin-updates.html"><p class="admins">Admin login</p></a>
+    <!-- <a href="admin-updates.html"><p class="admins">Admin login</p></a> -->
+    <button onclick="document.getElementById('id01').style.display='block'"><p class="admins">Admin login</p></button>
+
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate"  method="post">
+      
+        <div class="container" id="login-form">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" id="password" placeholder="Enter Password" name="psw" required><br>
+
+          <button type="button" id="login-button"  value="Login" class="submitb">Login</button>
+        </div>
+        
+      </form>
+    </div>
 
       <div style="margin: 4%;">
         <div class="imgs">
@@ -53,7 +71,28 @@
             document.getElementById("display1").innerText = localStorage.getItem("userInput1") || "Not updated";
             document.getElementById("display2").innerText = localStorage.getItem("userInput2") || "Not updated";
             document.getElementById("display3").innerText = localStorage.getItem("userInput3") || "Not updated";
-        </script>
+
+            var modal = document.getElementById('id01');
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Get the username and password fields and the login button
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+            const loginButton = document.getElementById("login-button");
+
+            loginButton.addEventListener("click", function() {
+              if (username.value === "admin" && password.value === "password") {
+                window.location.href = "admin-updates.html";
+              } else {
+                alert("Invalid username or password");
+              }
+            });
+          </script>
         
     </div>
 </main>
