@@ -27,8 +27,13 @@ img {
 }
 
 .forms {
-    color: black;
+    color: blue;
     padding-top: 12px;
+}
+
+.forms:hover {
+    color: #ea4f4c;
+    text-decoration: underline;
 }
 
 .new {
