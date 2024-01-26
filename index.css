@@ -7,7 +7,7 @@ body {
 
 main {
     background: url(images/mainpgpic.jpeg);
-    height: 100vh;
+    height: 75vh;
     background-size: cover;
 }
 
@@ -48,6 +48,7 @@ img {
 
 .admins:hover {
     color: #ea4f4c;
+    text-decoration: underline;
 }
 
 @media (max-width: 400px) {
