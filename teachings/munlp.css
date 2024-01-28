@@ -54,3 +54,15 @@
         margin-top: 15%;
     }
 }
+
+@media (max-width: 900px) {
+    .prof-details {
+        display: flex;
+        flex-direction: column;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
